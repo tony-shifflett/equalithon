@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
  
 
-const xHeaderGreen = ({title}) => {
+const XHeaderGreen = ({title}) => {
   return (
     <View style={styles.header}>
         <Icon name='close'/>
@@ -12,7 +12,7 @@ const xHeaderGreen = ({title}) => {
   )
 }
 
-xHeaderGreen.defaultProps = {
+XHeaderGreen.defaultProps = {
     title: 'Okionu'
 }
 
@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default xHeaderGreen
+export default XHeaderGreen
