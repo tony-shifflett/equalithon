@@ -6,6 +6,7 @@ const Logo = () => {
     <View>
         <Image 
         source={require('../assets/OKIONUapplogo.png')}
+        style={styles.img}
         />
     </View>
   )
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         height: 250,
         width: 250,
-        borderRadius: 100/2,
+        borderRadius: 250/2
     },
 })
 
