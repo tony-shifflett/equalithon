@@ -1,11 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Pressable, Text, StyleSheet } from 'react-native'
 
-const OptionsBar = () =>{
+const OptionsBar = (props) =>{
   return (
     <View style={styles.options}>
-        <Text style={styles.optionsText}>Login</Text>
-        <Text style={styles.optionsText}>Sign-Up</Text>
+        <Pressable onPress={()=>{props.formSelector('login')}}>
+          <Text style={styles.optionsText}>Login</Text>
+        </Pressable>
+        <Pressable onPress={()=>{props.formSelector('signup')}}>
+          <Text style={styles.optionsText}>Sign-Up</Text>
+        </Pressable>
     </View>
   )
 }
