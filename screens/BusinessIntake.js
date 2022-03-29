@@ -15,9 +15,9 @@ const BusinessIntake = () => {
             style={styles.img}
            />
         </View>
-        <View style={styles.form}>
+        <ScrollView style={styles.form}>
             <BusinessIntakeForm/>
-        </View>
+        </ScrollView>
     </View>
   )
 }
@@ -40,12 +40,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: '#7D3F1B',
     },
-    profile:{
-        height: 96, 
-        width: 96, 
-        alignSelf: 'center',
-        marginTop: 34,
-        marginBottom: 12,
+    form:{
+        height: 526,
     },
 })
 
