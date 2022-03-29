@@ -7,13 +7,13 @@ const SelectService = () => {
     <View>
         <XHeaderGreen/>
         <View>
-            <Pressable>
+            <Pressable style={styles.container}>
                 <Text style={styles.txt}>I Need Postpartum Services</Text>
                 <Image
                 source={require('../assets/i-need-services.jpg')}
                 style={styles.img}/>
             </Pressable>
-            <Pressable>
+            <Pressable style={styles.container}>
                 <Text style={styles.txt}>I Provide Postpartum Services</Text>
                 <Image
                 source={require('../assets/provider-services.jpg')}
@@ -29,12 +29,15 @@ const styles = StyleSheet.create({
         height: 188, 
         width: 281,
         alignSelf: 'center',
-        borderRadius: 100/4,
+        borderRadius: 100/8,
     }, 
     txt: {
         fontSize: 24,
         textAlign: 'center',
         color: '#7D3F1B',
+    }, 
+    container: {
+        paddingTop: 75,
     }
 })
 
