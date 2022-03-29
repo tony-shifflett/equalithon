@@ -1,11 +1,12 @@
 import React from 'react'
 import { View, Pressable, Image, Text, StyleSheet } from 'react-native'
+import Footer from '../components/Footer'
 import XHeaderGreen from '../components/headers/XHeaderGreen'
 
 const SelectService = () => {
   return (
     <View>
-        <XHeaderGreen/>
+        <XHeaderGreen title="Who Are You?"/>
         <View>
             <Pressable style={styles.container}>
                 <Text style={styles.txt}>I Need Postpartum Services</Text>
@@ -19,6 +20,7 @@ const SelectService = () => {
                 source={require('../assets/provider-services.jpg')}
                 style={styles.img}/>
             </Pressable>
+            <Footer/>
         </View>
     </View>
   )
