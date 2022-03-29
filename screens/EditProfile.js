@@ -8,9 +8,14 @@ const EditProfile = () => {
     <View>
         <BackHeaderGreen/>
         <View>
-            <Text>Change Profile Picture</Text>
+            <Image 
+            source={require('../assets/profile.png')}
+            style={styles.profile}/>
+            <Text style={styles.txt}>Change Profile Picture</Text>
         </View>
-        <EditProfileForm/>
+        <View style={styles.form}>
+            <EditProfileForm/>
+        </View>
     </View>
   )
 }
@@ -26,7 +31,14 @@ const styles = StyleSheet.create({
         fontSize: 24,
         textAlign: 'center',
         color: '#7D3F1B',
-    }
+    },
+    profile:{
+        height: 96, 
+        width: 96, 
+        alignSelf: 'center',
+        marginTop: 34,
+        marginBottom: 12,
+    },
 })
 
 export default EditProfile
