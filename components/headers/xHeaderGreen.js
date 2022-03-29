@@ -6,8 +6,10 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome';
 const XHeaderGreen = ({title}) => {
   return (
     <View style={styles.header}>
-        <Icon name='close'/>
-        <Text style={styles.text}>{title}</Text>
+        <View style={styles.container}>
+            <Text style={styles.text}>{title}</Text>
+            <Icon style={styles.icon} name='close'/>
+        </View>
     </View>
   )
 }
@@ -20,15 +22,28 @@ const styles = StyleSheet.create({
     header: {
         height: 120,
         backgroundColor: '#BFD8C6',
-        borderBottomRadius: 120/2,
         alignContent:'center',
         justifyContent: 'center',
     },
+    container:{
+        flexDirection: 'row', 
+        width: "100%",
+        alignContent: 'center', 
+        justifyContent: 'space-between',
+        alignSelf: 'center', 
+        paddingTop: 60,
+
+    },
     text: {
         color: 'black',
-        fontSize: 20, 
-        textAlign: 'center',
+        fontSize: 24, 
+        paddingLeft: 20,
     },
+    icon: {
+        fontSize: 24,
+        paddingRight: 20,
+        color: '#7D3F1B'
+    }
 })
 
 export default XHeaderGreen
