@@ -1,11 +1,13 @@
 import React from 'react'
 import { Pressable, Text, StyleSheet } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
-const LargeButton = ({buttonText}) => {
-  return (
-   <Pressable style={styles.btn}>
-       <Text style={styles.btnTxt}>{buttonText}</Text>
-   </Pressable>
+const LargeButton = ({buttonText, destination}) => {
+    const navigation = useNavigation()
+    return (
+    <Pressable style={styles.btn} onPress={()=>navigation.navigate(destination)}>
+        <Text style={styles.btnTxt}>{buttonText}</Text>
+    </Pressable>
   )
 }
 
@@ -28,6 +30,7 @@ const styles = StyleSheet.create({
 
 LargeButton.defaultProps = {
     buttonText: 'Press Me',
+    destination: "Login",
 }
 
 export default LargeButton

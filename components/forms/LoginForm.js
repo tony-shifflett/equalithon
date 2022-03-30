@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     txt:{
         fontSize: 18,
         color: '#858C94',
-        paddingTop: 20,
+        // paddingTop: 20,
     },
     inputStyling: {
         height: 59, 
