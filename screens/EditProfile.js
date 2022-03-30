@@ -2,11 +2,13 @@ import React from 'react'
 import { View, Pressable, Image, Text, StyleSheet } from 'react-native'
 import EditProfileForm from '../components/forms/EditProfileForm'
 import BackHeaderGreen from '../components/headers/BackHeaderGreen'
+import BackHeaderWhite from '../components/headers/BackHeaderWhite'
 
 const EditProfile = () => {
   return (
     <View>
-        <BackHeaderGreen/>
+        {/* <BackHeaderGreen/> */}
+        <BackHeaderWhite/>
         <View>
             <Image 
             source={require('../assets/profile.png')}

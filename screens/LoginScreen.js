@@ -29,7 +29,7 @@ const LoginScreen = () => {
         <LogoHeader/>
         <OptionsBar formSelector = {formStateChange}/>
         {checkState()}
-        {form == 'login' ? <LargeButton buttonText={buttonText}/> : <SmallButton buttonText={buttonText}/>}
+        {form == 'login' ? <LargeButton buttonText={buttonText} destination='SelectService'/> : <SmallButton buttonText={buttonText} destination='SelectService'/>}
     </View>
   )
 }
