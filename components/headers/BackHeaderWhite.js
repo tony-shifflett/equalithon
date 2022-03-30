@@ -1,17 +1,22 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import { useNavigation } from '@react-navigation/native';
  
 
 const BackHeaderWhite = ({title}) => {
-  return (
-    <View style={styles.header}>
-        <View style={styles.container}>
-            <Icon style={styles.icon} name='arrow-left'/>
-            <Text style={styles.text}>{title}</Text>
+
+    const navigation = useNavigation()
+    return (
+        <View style={styles.header}>
+            <View style={styles.container}>
+                <Pressable onPress={()=>navigation.goBack()}>
+                <Icon style={styles.icon} name='arrow-left'/> 
+                </Pressable>
+                <Text style={styles.text}>{title}</Text>
+            </View>
         </View>
-    </View>
-  )
+    )
 }
 
 BackHeaderWhite.defaultProps = {

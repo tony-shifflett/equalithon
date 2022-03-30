@@ -1,17 +1,22 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, Pressable, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import { useNavigation } from '@react-navigation/native';
  
 
 const XHeaderGreen = ({title}) => {
-  return (
-    <View style={styles.header}>
-        <View style={styles.container}>
-            <Text style={styles.text}>{title}</Text>
-            <Icon style={styles.icon} name='close'/>
+    const navigation = useNavigation()
+    return (
+        <View style={styles.header}>
+            <View style={styles.container}>
+                <Text style={styles.text}>{title}</Text>
+                {/* The X button is set here to return to the login page pending discussion of appropriate behavior */}
+                <Pressable  onPress={()=>navigation.navigate('LoginScreen')}>
+                    <Icon style={styles.icon} name='close'/>
+                </Pressable>
+            </View>
         </View>
-    </View>
-  )
+    )
 }
 
 XHeaderGreen.defaultProps = {
