@@ -7,7 +7,7 @@ import BackHeaderGreen from '../components/headers/BackHeaderGreen'
 
 const BusinessIntake = () => {
   return (
-    <View>
+    <View style={styles.outerContainer}>
         <BackHeaderGreen title='Business Intake Form'/>
         <View style={styles.container}>
             <Image 
@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
         color: '#7D3F1B',
     },
     form:{
-        height: 526,
+        // height: 526,
+        flex: 1, 
     },
 })
 

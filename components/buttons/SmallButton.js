@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 
 SmallButton.defaultProps = {
     buttonText: 'Press Me',
-    destination: 'Login'
+    destination: 'LoginScreen'
 }
 
 export default SmallButton
