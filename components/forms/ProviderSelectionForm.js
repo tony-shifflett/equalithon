@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Pressable, Image, Text, StyleSheet } from 'react-native'
 
-const ProviderSelection = () => {
+const ProviderSelectionForm = () => {
   return (
     <View style={styles.form}>
         <Pressable style={styles.specialistType}>
@@ -59,4 +59,4 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
 })
-export default ProviderSelection
+export default ProviderSelectionForm
