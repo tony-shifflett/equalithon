@@ -1,14 +1,14 @@
 import React from 'react'
 import { View, Pressable, Image, Text, StyleSheet } from 'react-native'
+import SmallButton from '../components/buttons/SmallButton'
 import EditProfileForm from '../components/forms/EditProfileForm'
 import BackHeaderGreen from '../components/headers/BackHeaderGreen'
-import BackHeaderWhite from '../components/headers/BackHeaderWhite'
 
 const EditProfile = () => {
   return (
     <View>
         {/* <BackHeaderGreen/> */}
-        <BackHeaderWhite/>
+        <BackHeaderGreen title={'Edit Profile'}/>
         <View>
             <Image 
             source={require('../assets/profile.png')}
@@ -18,6 +18,7 @@ const EditProfile = () => {
         <View style={styles.form}>
             <EditProfileForm/>
         </View>
+        <SmallButton buttonText={'Done'}/>
     </View>
   )
 }
