@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 import SelectService from './screens/SelectService';
 import LoginScreen from './screens/LoginScreen'
 import EditProfile from './screens/EditProfile';
@@ -27,6 +26,9 @@ const App = () => {
         <Stack.Screen
         name='EditProfile'
         component={EditProfile}/>
+        <Stack.Screen
+        name='BusinessIntake'
+        component={BusinessIntake}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
