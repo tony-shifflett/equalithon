@@ -24,6 +24,9 @@ const App = () => {
         <Stack.Screen
         name='SelectService'
         component={SelectService}/>
+        <Stack.Screen
+        name='EditProfile'
+        component={EditProfile}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

@@ -2,28 +2,31 @@ import React from 'react'
 import { View, Pressable, Image, Text, StyleSheet } from 'react-native'
 import Footer from '../components/Footer'
 import XHeaderGreen from '../components/headers/XHeaderGreen'
+import { useNavigation } from '@react-navigation/native'
 
 const SelectService = () => {
-  return (
-    <View>
-        <XHeaderGreen title="Who Are You?"/>
+
+    const navigation = useNavigation();
+    return (
         <View>
-            <Pressable style={styles.container}>
-                <Text style={styles.txt}>I Need Postpartum Services</Text>
-                <Image
-                source={require('../assets/i-need-services.jpg')}
-                style={styles.img}/>
-            </Pressable>
-            <Pressable style={styles.container}>
-                <Text style={styles.txt}>I Provide Postpartum Services</Text>
-                <Image
-                source={require('../assets/provider-services.jpg')}
-                style={styles.img}/>
-            </Pressable>
-            <Footer/>
+            <XHeaderGreen title="Who Are You?"/>
+            <View>
+                <Pressable style={styles.container} onPress={()=>navigation.navigate('EditProfile')}>
+                    <Text style={styles.txt}>I Need Postpartum Services</Text>
+                    <Image
+                    source={require('../assets/i-need-services.jpg')}
+                    style={styles.img}/>
+                </Pressable>
+                <Pressable style={styles.container}>
+                    <Text style={styles.txt}>I Provide Postpartum Services</Text>
+                    <Image
+                    source={require('../assets/provider-services.jpg')}
+                    style={styles.img}/>
+                </Pressable>
+                <Footer/>
+            </View>
         </View>
-    </View>
-  )
+    )
 }
 
 const styles = StyleSheet.create({
