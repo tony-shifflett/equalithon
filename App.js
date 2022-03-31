@@ -8,6 +8,7 @@ import DocumentUploadForm from './components/forms/DocumentUploadForm';
 import DocumentUpload from './screens/DocumentUpload';
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SelectProvider from './screens/SelectProvider';
 
 
 const Stack = createNativeStackNavigator()
@@ -29,6 +30,9 @@ const App = () => {
         <Stack.Screen
         name='BusinessIntake'
         component={BusinessIntake}/>
+        <Stack.Screen
+        name='SelectProvider'
+        component={SelectProvider}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
