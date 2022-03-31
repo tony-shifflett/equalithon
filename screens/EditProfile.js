@@ -18,7 +18,7 @@ const EditProfile = () => {
         <View style={styles.form}>
             <EditProfileForm/>
         </View>
-        <SmallButton buttonText={'Done'}/>
+        <SmallButton buttonText={'Done'} destination={'SelectProvider'}/>
     </View>
   )
 }

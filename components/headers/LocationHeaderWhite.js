@@ -1,16 +1,15 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native'
-import {Icon as EntypoIcon} from 'react-native-vector-icons/dist/FontAwesome';
-import Icon from 'react-native-vector-icons/dist/Entypo';
-import { useNavigation } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
+// import { useNavigation } from '@react-navigation/native';
  
 
 const LocationHeaderWhite = ({title}) => {
-    const navigation = useNavigation()
+    // const navigation = useNavigation()
     return (
         <View style={styles.header}>
             <View style={styles.container}>
-                <EntypoIcon style={styles.icon} name='location-pin'/>
+                <Icon style={styles.icon} name='map-pin'/>
                 <Text style={styles.text}>{title}</Text>
                 {/* The X button is set here to return to the login page pending discussion of appropriate behavior */}
                 <Pressable  onPress={()=>navigation.navigate('LoginScreen')}>
@@ -54,4 +53,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default LocationHeaderWhite
+export default LocationHeaderWhite 
