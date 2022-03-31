@@ -17,7 +17,7 @@ const SelectService = () => {
                     source={require('../assets/i-need-services.jpg')}
                     style={styles.img}/>
                 </Pressable>
-                <Pressable style={styles.container}>
+                <Pressable style={styles.container} onPress={()=>navigation.navigate('BusinessIntake')}>
                     <Text style={styles.txt}>I Provide Postpartum Services</Text>
                     <Image
                     source={require('../assets/provider-services.jpg')}
