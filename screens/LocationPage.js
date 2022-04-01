@@ -12,7 +12,7 @@ const LocationPage = () => {
             <SearchBox placeholderTxt={'Enter Street Address'}/>
         </View>
         <View>
-            <SmallButton buttonText={'Continue'}/>
+            <SmallButton buttonText={'Continue'} destination='BrowseProviders'/>
         </View>
     </View>
   )
