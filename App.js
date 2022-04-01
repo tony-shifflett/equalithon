@@ -11,6 +11,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SelectProvider from './screens/SelectProvider';
 import LocationPage from './screens/LocationPage';
 import AccountSettings from './screens/AccountSettings';
+import BrowseProviders from './screens/BrowseProviders';
 
 
 const Stack = createNativeStackNavigator()
@@ -41,6 +42,9 @@ const App = () => {
         <Stack.Screen
         name='AccountSettings'
         component={AccountSettings}/>
+        <Stack.Screen
+        name='BrowseProviders'
+        component={BrowseProviders}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
