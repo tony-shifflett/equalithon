@@ -10,6 +10,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SelectProvider from './screens/SelectProvider';
 import LocationPage from './screens/LocationPage';
+import AccountSettings from './screens/AccountSettings';
 
 
 const Stack = createNativeStackNavigator()
@@ -37,6 +38,9 @@ const App = () => {
         <Stack.Screen
         name='LocationPage'
         component={LocationPage}/>
+        <Stack.Screen
+        name='AccountSettings'
+        component={AccountSettings}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
