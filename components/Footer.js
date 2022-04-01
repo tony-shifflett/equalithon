@@ -30,7 +30,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: "space-evenly", 
         alignItems: 'center',
-        marginTop: 60,
+        // marginTop: 60,
+        position: 'absolute', 
+        flex: 0.1,
+        left: 0, 
+        right: 0, 
+        bottom: -350,
         
     },
     icon: {

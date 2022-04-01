@@ -23,7 +23,6 @@ const SelectService = () => {
                     source={require('../assets/provider-services.jpg')}
                     style={styles.img}/>
                 </Pressable>
-                <Footer/>
             </View>
         </View>
     )
