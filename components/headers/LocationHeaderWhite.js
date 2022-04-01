@@ -21,7 +21,7 @@ const LocationHeaderWhite = ({title}) => {
 }
 
 LocationHeaderWhite.defaultProps = {
-    title: 'Okionu'
+    title: 'New York City'
 }
 
 const styles = StyleSheet.create({

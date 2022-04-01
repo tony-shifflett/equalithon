@@ -11,11 +11,9 @@ const LoginScreen = () => {
     const [form, setForm] = useState('login')
     const formStateChange = (formName)=>{
         setForm(formName)
-        console.log(form)
     }
     let buttonText
     const checkState = () =>{
-        console.log('rerendering')
         if (form == 'signup'){
             buttonText = 'Sign Up'
             return <SignUpForm/>
