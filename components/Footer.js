@@ -6,9 +6,12 @@ import { useNavigation } from '@react-navigation/native';
 
 const Footer = () => {
     const navigation = useNavigation()
+    const pressHandler = (destination) =>{
+        navigation.navigate(destination)
+    }
     return (
         <View style={styles.footer}>
-            <Pressable>
+            <Pressable onPress={()=>pressHandler('SelectProvider')}>
                 <Icon name='home' style={styles.icon}/>
                 <Text style={styles.txt}>Home</Text>
             </Pressable>
@@ -16,7 +19,7 @@ const Footer = () => {
                 <Icon name='search' style={styles.icon}/>
                 <Text style={styles.txt}>Community</Text>
             </Pressable>
-            <Pressable>
+            <Pressable onPress={()=>pressHandler('EditProfile')}>
                 {/* user-o icon is a placeholder until I can find the icon used in the wireframes */}
                 <Icon name='user-o' style={styles.icon}/>
                 <Text style={styles.txt}>Profile</Text>
