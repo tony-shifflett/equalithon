@@ -9,11 +9,11 @@ const BrowseProviders = () => {
     <View>
         <BackHeaderGreen title={'Browse Providers'}/>
         <View style={styles.search}>
-            <SearchBox/>
+            <SearchBox placeholderTxt={'Search by keywords'}/>
         </View>
         <View style={styles.buttonContainer}>
-            <SmallButton/>
-            <SmallButton/>
+            <SmallButton buttonText={'Provider Type'}/>
+            <SmallButton buttonText={'Location'}/>
         </View>
     </View>
   )
