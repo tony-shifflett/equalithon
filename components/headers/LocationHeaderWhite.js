@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
  
 
 const LocationHeaderWhite = ({title}) => {
-    // const navigation = useNavigation()
+    const navigation = useNavigation()
     return (
         <View style={styles.header}>
             <View style={styles.container}>
@@ -43,11 +43,9 @@ const styles = StyleSheet.create({
     text: {
         color: 'black',
         fontSize: 24, 
-        // paddingLeft: 20,
     },
     icon: {
         fontSize: 24,
-        // paddingRight: 20,
         color: '#7D3F1B'
     }
 })
