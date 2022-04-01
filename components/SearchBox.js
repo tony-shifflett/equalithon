@@ -6,10 +6,12 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome';
 const SearchBox = ({placeholderTxt}) => {
   return (
       <View style={styles.container}>
-          <Icon name="search"/>
+          <Icon name="search"
+          style={styles.icon}/>
           <TextInput
             placeholder={placeholderTxt}
           />
+
       </View>
   )
 }
@@ -21,9 +23,20 @@ SearchBox.defaultProps = {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        paddingTop: 200,
+        height: 48, 
+        width: 343,
+        marginTop: 50,
+        marginBottom: 50,
         alignSelf: 'center',
+        justifyContent: 'flex-start', 
+        alignItems: 'center', 
+        borderWidth: 1,
+        borderRadius: 100/16,
+    },
+    icon:{
         fontSize: 20,
+        marginLeft: 10,
+        marginRight: 10,
     },
 })
 
