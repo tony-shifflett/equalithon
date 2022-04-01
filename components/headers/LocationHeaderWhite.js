@@ -11,8 +11,7 @@ const LocationHeaderWhite = ({title}) => {
             <View style={styles.container}>
                 <Icon style={styles.icon} name='map-pin'/>
                 <Text style={styles.text}>{title}</Text>
-                {/* The X button is set here to return to the login page pending discussion of appropriate behavior */}
-                <Pressable  onPress={()=>navigation.navigate('LoginScreen')}>
+                <Pressable  onPress={()=>navigation.navigate('AccountSettings')}>
                     <Icon style={styles.icon} name='cog'/>
                 </Pressable>
             </View>
