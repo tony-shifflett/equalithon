@@ -25,8 +25,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height: 48, 
         width: 343,
-        marginTop: 50,
-        marginBottom: 50,
         alignSelf: 'center',
         justifyContent: 'flex-start', 
         alignItems: 'center', 
