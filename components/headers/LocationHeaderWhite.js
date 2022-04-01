@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row', 
         width: "100%",
         alignContent: 'center', 
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         alignSelf: 'center', 
         paddingTop: 60,
 
@@ -43,11 +43,11 @@ const styles = StyleSheet.create({
     text: {
         color: 'black',
         fontSize: 24, 
-        paddingLeft: 20,
+        // paddingLeft: 20,
     },
     icon: {
         fontSize: 24,
-        paddingRight: 20,
+        // paddingRight: 20,
         color: '#7D3F1B'
     }
 })
