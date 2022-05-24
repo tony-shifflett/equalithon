@@ -2,10 +2,15 @@ import React from 'react'
 import { Pressable, Text, StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
-const SmallButton = ({buttonText, destination}) => {
+const SmallButton = ({buttonText, destination, isNavigable}) => {
     const navigation = useNavigation()
+    let pressHandler
+    pressHandler = ()=>{ navigation.navigate(destination)}
+  
+
     return (
-    <Pressable style={styles.btn} onPress={()=>navigation.navigate(destination)}>
+    <Pressable style={styles.btn}
+     onPress={()=>pressHandler()}>
         <Text style={styles.btnTxt}>{buttonText}</Text>
     </Pressable>
     )
@@ -30,7 +35,8 @@ const styles = StyleSheet.create({
 
 SmallButton.defaultProps = {
     buttonText: 'Press Me',
-    destination: 'LoginScreen'
+    destination: 'LoginScreen', 
+    isNavigable: true, 
 }
 
 export default SmallButton
