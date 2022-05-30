@@ -1,53 +1,56 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { View, TouchableOpacity, Pressable, Image, Text, StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
 const ProviderSelectionForm = () => {
 
+    const [providerType, setProviderType] = useState("")
     const navigation = useNavigation()
-    const pressHandler = ()=>{
+    
+    const pressHandler = (provider)=>{
+        setProviderType(provider)
         navigation.navigate('LocationPage')
     }
     return (
         <View style={styles.form}>
             <Pressable style={styles.specialistType}
-            onPress={()=>pressHandler()}>
+            onPress={()=>pressHandler("therapist")}>
                 <Image style={styles.img}
                 source={require('../../assets/therapist.jpg')}/>
                 <Text style={styles.txt}>Therapist</Text>
             </Pressable>
             <Pressable style={styles.specialistType}
-            onPress={()=>pressHandler()}>
+            onPress={()=>pressHandler("chef")}>
                 <Image style={styles.img}
                 source={require('../../assets/chef.jpg')}/>
                 <Text style={styles.txt}>Chef</Text>
             </Pressable>
             <Pressable style={styles.specialistType}
-            onPress={()=>pressHandler()}>
+            onPress={()=>pressHandler("pelvic floor specialist")}>
                 <Image style={styles.img}
                 source={require('../../assets/pelvic-floor-specialist.jpg')}/>
                 <Text style={styles.txt}>Pelvic Floor</Text><Text style={styles.txt}>Therapist</Text>
             </Pressable>
             <Pressable style={styles.specialistType}
-            onPress={()=>pressHandler()}>
+            onPress={()=>pressHandler("doula")}>
                 <Image style={styles.img}
                 source={require('../../assets/doula.jpg')}/>
                 <Text style={styles.txt}>Postpartum</Text><Text style={styles.txt}>Doula</Text>
             </Pressable>
             <Pressable style={styles.specialistType}
-            onPress={()=>pressHandler()}>
+            onPress={()=>pressHandler("nanny")}>
                 <Image style={styles.img}
                 source={require('../../assets/nanny.jpg')}/>
                 <Text style={styles.txt}>Nanny</Text>
             </Pressable>
             <Pressable style={styles.specialistType}
-            onPress={()=>pressHandler()}>
+            onPress={()=>pressHandler("cleaner")}>
                 <Image style={styles.img}
                 source={require('../../assets/cleaning-services.jpg')}/>
                 <Text style={styles.txt}>Home</Text><Text style={styles.txt}>Cleaning</Text>
             </Pressable>
             <Pressable style={styles.specialistType}
-            onPress={()=>pressHandler()}>
+            onPress={()=>pressHandler("lactation specialist")}>
                 <Image style={styles.img}
                 source={require('../../assets/lactation-specialist.jpg')}/>
                 <Text style={styles.txt}>Lactation</Text><Text style={styles.txt}>Specialist</Text>
